@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Material Icons CDN -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../Barang/barang.css">
+    <!-- <link rel="stylesheet" href="../style.css"> -->
+
+    <title>Barang</title>
+
+    <!-- Tailwind CSS -->
+</head>
+<body>
+    <div class="container">
+        <!-- ASIDE / SIDEBAR -->
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <img src="../assets/images/logo.png" alt="Logo" id="logo">
+                    <h2>Jaya Mulya AC Mobil <!--<span class="danger"></span>--> </h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-symbols-sharp">close</span>
+                </div>
+            </div>
+            <div class="sidebar">
+                <a href="../kasir/kasir.html" >
+                    <span class="material-symbols-sharp">grid_view </span>
+                        <h3>Home</h3>
+                </a>
+
+                <a href="#" >
+                    <span class="material-symbols-sharp">person</span>
+                        <h3>Daftar Pelanggan </h3>
+                </a>
+
+                <a href="../Barang/barang.html" class="active">
+                    <span class="material-symbols-sharp">inventory </span>
+                        <h3>Barang</h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-symbols-sharp">settings</span>
+                        <h3>Settings</h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-symbols-sharp">add_circle</span>
+                        <h3>Tambahkan Barang</h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-symbols-sharp">logout</span>
+                        <h3>Logout</h3>
+                </a>
+            </div>
+            
+        </aside>
+        <!-- end of aside -->
+
+        <main>
+            <h1>Dashboard</h1>
+
+            <div class="date">
+                <input type="date">
+            </div>
+
+            <div class="input-barang"> 
+
+                <table>
+                    <tr>
+                        <td><label for="Kata-kunci">Kata kunci :</label>
+                            <input type="text" name="Kata-kunci" id="">
+                        </td>
+
+                        <td><label for="Kata-kunci">Gudang :</label>
+                            <input type="select" name="Kata-kunci" id="">
+                        </td>
+
+                        <td><label for="merek">Merek :</label>
+                            <input type="text" name="merek" id="">
+                        </td>
+
+                        <td><label for="Kata-kunci">Jenis :</label>
+                            <input type="text" name="Kata-kunci" id="">
+                        </td>
+
+                        <td>
+                            <label for="Tipe Item">Tipe Item :</label>
+                            <input type="text" name="Tipe Item" id="">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label for="Rak">Rak :</label>
+                            <input type="text" name="Rak" id="">
+                        </td>
+
+                        <td>
+                            <label for="Rak">Rak :</label>
+                            <input type="text" name="Rak" id="">
+                        </td>
+
+                        <td>
+                            <label  for="gudang">Tempat Gudang :</label>
+                            <select class="gudang" name="cars" id="cars">
+                                <option value="Gudang A">Gudang A</option>
+                                <option value="gudang B">Gudang B</option>
+                                <option value="gudang C">Gudang C</option>
+                                <option value="gudang D">Gudang D</option>
+                            </select>
+                        </td>
+
+                        <td>
+                            <label  for="urut">Urut berdasarkan Huruf:</label>
+                            <select class="urut" name="urut" id="urut">
+                                <option value="az">A - Z</option>
+                                <option value="za">Z - A</option>
+                            </select>
+                        </td>
+
+                        <td>
+                            <label  for="urut">Urut berdasarkan :</label>
+                            <select class="urut" name="urut" id="urut">
+                                <option value="Rak">Rak</option>
+                                <option value="Gudang">Gudang</option>
+                                <option value="Harga">Harga</option>
+                                <option value="Jenis">Jenis</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+                
+                
+<!--                 
+                <label for="Kata-kunci">Merek</label>
+                <input type="text" name="Kata-kunci" id="">
+                
+                <label for="Kata-kunci">Rak</label>
+                <input type="text" name="Kata-kunci" id="">
+                
+                <label for="Kata-kunci">Urut berdasarkan</label>
+                <input type="text" name="Kata-kunci" id=""> -->
+                
+            </div>
+
+            <div class="tombol">
+                <button class="button-one">Tambah</button>
+                <button class="button-two">Edit</button>
+                <button class="button-three">Duplikat</button>
+                <button class="button-four">Hapus</button>
+                <button class="button-five">Cari</button>
+            </div>
+
+            <div class="pagination">
+                <button class="btn1" onclick="backBtn()"> <img src="../assets/icon/arrow.png" alt="arrow"> prev</button>
+                    <ul>
+                        <li class="link active" value="1" onclick="activelink()">1</li>
+                        <li class="link" value="2" onclick="activelink()">2</li>
+                        <li class="link" value="3" onclick="activelink()">3</li>
+                        <li class="link" value="4" onclick="activelink()">4</li>
+                        <li class="link" value="5" onclick="activelink()">5</li>
+                        <li class="link" value="6" onclick="activelink()">6</li>
+                    </ul>
+                <button class="btn2" onclick="nextBtn()"> <img src="../assets/icon/arrow.png" alt="arrow"> next</button>
+            </div>
+
+            <div class="recent-orders">
+                <h2>Daftar Barang</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nomor</th>
+                            <th>Nama Item</th>
+                            <th>SKU</th>
+                            <th>Stok</th>
+                            <th>Satuan</th>
+                            <th>Jenis</th>
+                            <th>Harga Pokok</th>
+                            <th>Harga Jual</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Mesin Bubut</td>
+                            <td>MBU-002</td>
+                            <td>1</td>
+                            <td>PCS</td>
+                            <td>Mesin</td>
+                            <td>Rp 15.000.000</td>
+                            <td>Rp 20.000.000</td>
+                        </tr>
+
+                        <tr>
+                            <td>2</td>
+                            <td>Mesin Bubut</td>
+                            <td>MBU-002</td>
+                            <td>1</td>
+                            <td>PCS</td>
+                            <td>Mesin</td>
+                            <td>Rp 15.000.000</td>
+                            <td>Rp 20.000.000</td>
+                        </tr>
+
+                        <tr>
+                            <td>3</td>
+                            <td>Mesin Lamer</td>
+                            <td>MLA-047</td>
+                            <td>4</td>
+                            <td>PCS</td>
+                            <td>Mesin</td>
+                            <td>Rp 10.000.000</td>
+                            <td>Rp 12.000.000</td>
+                        </tr>
+
+                        <tr>
+                            <td>4</td>
+                            <td>Mesin Bubut</td>
+                            <td>MBU-002</td>
+                            <td>1</td>
+                            <td>PCS</td>
+                            <td>Mesin</td>
+                            <td>Rp 15.000.000</td>
+                            <td>Rp 20.000.000</td>
+                        </tr>
+
+                        <tr>
+                            <td>5</td>
+                            <td>Mesin Bubut</td>
+                            <td>MBU-002</td>
+                            <td>1</td>
+                            <td>PCS</td>
+                            <td>Mesin</td>
+                            <td>Rp 15.000.000</td>
+                            <td>Rp 20.000.000</td>
+                        </tr>
+                    </tbody>
+                    
+                </table>
+                <!-- <a href="#">show all</a> -->
+            </div>
+        </main>
+        <!-- END OF MAIN -->
+        <div class="right">
+            <div class="top">
+                <button id="menu-btn">
+                    <span class="material-symbols-sharp"> menu </span>
+                </button>
+                <div class="theme-toggler">
+                    <span class="material-symbols-sharp active">sunny</span>
+                    <span class="material-symbols-sharp">dark_mode </span>
+                </div>
+                <div class="profile">
+                    <div class="info">
+                        <p>Hey,Admin</p>
+                        <!-- <small class="text-muted">Admin</small> -->
+                    </div>
+
+                    <div class="profile-photo">
+                        <img src="../assets/images/profile-1.jpg" alt="profile" srcset="">
+                    </div>
+                </div>
+            </div>
+            <!-- END OF TOP -->
+                </div>
+        </div>
+
+        <!-- JavaScript -->
+    <script src="../Barang/barang.js"></script>
+</body>
+</html>
